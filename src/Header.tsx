@@ -1,14 +1,20 @@
-import React from 'react';
-import Button from './Button'
-const Header  = ()=>{
-    return <header className="App-header">
-    <Button
-    text="show panel"
-    />
-    <Button
-    text="hide panel"
-    />
-  </header>
-}
+import React, { useContext } from "react";
+import Button from "./Components/Button";
+import PanelContext from "./Contexts/PanelContext";
 
-export default Header 
+const Header = () => {
+  const { showing, setShowing } = useContext(PanelContext);
+  return (
+    <header className="App-header">
+      <h1> Ether Unit Converter</h1>
+      {!showing && (
+        <Button text="show panel" onClick={() => setShowing(true)} />
+      )}
+      {showing && (
+        <Button text="hide panel" onClick={() => setShowing(false)} />
+      )}
+    </header>
+  );
+};
+
+export default Header;
