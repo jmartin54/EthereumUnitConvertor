@@ -2,6 +2,7 @@ import React, { useCallback, useContext, useState } from "react";
 import EthInput from "./Components/EthInput";
 import PanelContext from "./Contexts/PanelContext";
 import units, { Unit } from "./Models/Unit";
+import "./Styles/Body.css";
 
 const Body = () => {
   // state

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Button from "./Components/Button";
 import PanelContext from "./Contexts/PanelContext";
+import "./Styles/Header.css";
 
 const Header = () => {
   const { showing, setShowing } = useContext(PanelContext);

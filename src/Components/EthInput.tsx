@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import { Unit } from "../Models/Unit";
+import "../Styles/EthInput.css";
 
 type EthInputProps = {
   wei: number | undefined;
